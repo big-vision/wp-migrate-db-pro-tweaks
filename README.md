@@ -16,7 +16,7 @@ Open the wp-migrate-db-pro-tweaks.php file and take a look at the `init()` funct
 Usage
 -----
 
-Normally deploying between development, staging, and production wordpress sites will require you to go in and revert the read settings on a case by case basis.  For example, I don't want my staging site to be crawled so I turn read settings off on development before I deploy.  Later I deploy to production, only to forget to turn read settings back on.  This can negatively impact SEO in some instances, and cause all sorts of problems.  
+Normally deploying between development, staging, and production wordpress sites will require you to go in and change the read settings on a case by case basis.  For example, I don't want my staging site to be crawled so I turn read settings off on development before I deploy.  Later I deploy to production, only to forget to turn read settings back on.  This can negatively impact SEO in some instances, and cause all sorts of problems.  
 
 ##### This solves the issue by preventing read settings from being migrated in the first place.
 
