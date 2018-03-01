@@ -31,7 +31,7 @@ class WP_Migrate_DB_Pro_Tweaks {
 		//add_filter( 'wpmdb_upload_info', array( $this, 'upload_info' ) );
 		//add_filter( 'wpmdb_upload_dir_name', array( $this, 'upload_dir_name' ) );
 		//add_filter( 'wpmdb_default_remote_post_timeout', array( $this, 'default_remote_post_timeout' ) );
-		//add_filter( 'wpmdb_preserved_options', array( $this, 'preserved_options' ) );
+		add_filter( 'wpmdb_preserved_options', array( $this, 'preserved_options' ) );
 		//add_filter( 'wpmdb_hide_safe_mode_warning', array( $this, 'hide_safe_mode_warning' ) );
 		//add_filter( 'wpmdb_create_table_query', array( $this, 'create_table_query' ), 10, 2 );
 		//add_filter( 'wpmdb_rows_where', array( $this, 'rows_where' ), 10, 2 );
@@ -53,7 +53,7 @@ class WP_Migrate_DB_Pro_Tweaks {
 	 * The example below preserves the 'blogname' value though any number of additional options may be added.
 	 */
 	function preserved_options( $options ) {
-		$options[] = 'blogname';
+		$options[] = 'blog_public';
 
 		return $options;
 	}
